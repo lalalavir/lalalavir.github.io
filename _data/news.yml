@@ -1,0 +1,16 @@
+# News / updates, shown newest first. Add a line at the top for each update.
+# date: free text shown as a small tag (e.g. "Mar 2026", "2026.03").
+# html: the update text; basic HTML allowed (links, <strong>, etc.).
+
+- date: "Mar 2026"
+  html: 'Started as a Research Intern at the Qingtian Research Institute, <strong>Cardinal Operations (Shanshu Technology)</strong>, working on GPU-accelerated solvers.'
+
+- date: "2026"
+  html: 'Our paper on GPU-accelerated VNS for the space-free multi-row facility layout problem is <strong>under review</strong> at EJOR.'
+
+- date: "2026"
+  html: 'Our paper on a graph-reduction heuristic for the Weighted Total Domination Problem is <strong>under review</strong> at COR.'
+
+# Example of how to add a future entry:
+# - date: "May 2026"
+#   html: 'Gave a talk on <a href="#">GPU optimization</a> at ...'

@@ -1,0 +1,40 @@
+# Site settings
+title: Hongrui Zhu
+tagline: Undergraduate Researcher
+description: >-
+  Homepage of Hongrui Zhu — research in GPU-accelerated algorithms for
+  integer programming and LLM-based agents for operations management.
+author: Hongrui Zhu
+url: "https://lalalavir.github.io"
+baseurl: ""
+
+# ---- Profile card (shown in the left sidebar) ----
+profile:
+  name: "Hongrui Zhu"
+  name_cn: "朱红睿"            # optional Chinese name; leave "" to hide
+  photo: "/assets/img/profile.svg"   # replace with /assets/img/profile.jpg once you add a real photo
+  title: "Undergraduate Researcher"
+  affiliation: "Zhongnan University of Economics and Law"
+  affiliation_url: "http://www.zuel.edu.cn/"
+  location: "Wuhan, China"
+
+# ---- Contact / social links (blank ones are hidden) ----
+email: "zhr050319@gmail.com"
+github_username: "lalalavir"
+scholar_url: ""              # add your Google Scholar profile URL
+linkedin_url: ""            # add your LinkedIn URL
+twitter_url: ""             # add your X / Twitter URL
+cv_url: ""                  # link to a CV PDF, e.g. "/assets/cv.pdf"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .gitignore

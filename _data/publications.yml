@@ -1,0 +1,43 @@
+# Publications. To add a new paper, copy one block below and edit the fields.
+# - Use "*" in authors after a name to mark corresponding author (it will render as a superscript note).
+# - Your own name "Hongrui Zhu" is automatically bolded in the template.
+# - status: shown as a small tag on the right (e.g. "Under Review", "Preprint", "In Progress").
+# - links: optional list of {name, url}. Omit or leave empty if none yet.
+
+- title: "A GPU-based Optimization Algorithm for Unsplittable Multicommodity Flow Problem in Capacitated Space-Time Network"
+  authors: "Hongrui Zhu, Yi Xiong, Rui Zhang, Mingjie Li*"
+  venue: "Submitted to Operations Research"
+  status: "In Progress"
+  links: []
+
+- title: "A Two-stage Benders Decomposition for Electric Bus Charging Infrastructure Planning"
+  authors: "Hongrui Zhu, Yi Xiong, Rui Zhang, Mingjie Li*"
+  venue: "Submitted to Manufacturing & Service Operations Management (MSOM)"
+  status: "In Progress"
+  links: []
+
+- title: "A GPU-accelerated Hierarchical Variable Neighborhood Search for the Space-free Multi-row Facility Layout Problem"
+  authors: "Hongrui Zhu, Jin-Kao Hao, Yi Xiong, Si Liu, Mingjie Li*"
+  venue: "Submitted to European Journal of Operational Research (EJOR)"
+  status: "Under Review"
+  links: []
+
+- title: "A Graph Reduction Driven Three-phase Heuristic Search for the Weighted Total Domination Problem"
+  authors: "Hongrui Zhu, Bingzhuo Zhang, Mingjie Li, Si Liu, Yi Xiong*"
+  venue: "Submitted to Computers & Operations Research (COR)"
+  status: "Under Review"
+  links: []
+
+- title: "Data Mining Driven Hybrid Evolutionary Search for the Median Problem with Interconnected Facilities"
+  authors: "Yuji Zou, Bingzhuo Zhang, Hongrui Zhu, Jin-Kao Hao, Chenglin Gui"
+  venue: "Submitted to Computers & Operations Research (COR)"
+  status: "Under Review"
+  links: []
+
+- title: "Multi-Hospital Collaborative Operating Room Scheduling Using Digital Twin"
+  authors: "Hongrui Zhu, Haoyan Gong"
+  venue: "SSRN"
+  status: "Preprint"
+  links: []
+    # - name: "SSRN"
+    #   url: "https://papers.ssrn.com/..."

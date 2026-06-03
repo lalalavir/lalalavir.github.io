@@ -1,0 +1,375 @@
+/* ============================================================
+   Academic homepage — sidebar profile card + main content
+   ============================================================ */
+
+:root {
+  --ink:        #1f2328;   /* primary text */
+  --ink-soft:   #57606a;   /* secondary text */
+  --ink-faint:  #8b949e;   /* meta */
+  --line:       #e6e8eb;   /* hairlines */
+  --bg:         #ffffff;
+  --bg-soft:    #f6f8fa;   /* card / tag background */
+  --accent:     #2f6f9f;   /* links */
+  --accent-dk:  #1f4d72;
+  --tag-bg:     #eef2f6;
+  --sidebar-w:  16rem;
+  --maxw:       64rem;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dk); text-decoration: underline; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-name {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+.topbar-name:hover { text-decoration: none; color: var(--accent); }
+.topbar-nav {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+.topbar-nav a { color: var(--ink-soft); margin-left: 1.4rem; }
+.topbar-nav a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------- Page grid ---------- */
+.page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2.8rem 1.5rem 0;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar { position: sticky; top: 5rem; }
+.card { text-align: center; }
+.avatar {
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  display: block;
+  margin: 0 auto 1.2rem;
+}
+.card-name {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ink);
+}
+.card-name-cn {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+  margin: 0.1rem 0 0;
+}
+.card-title {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0.5rem 0 0.2rem;
+}
+.card-affil {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0.3rem 0 0;
+}
+.card-loc {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  margin: 0.7rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.card-loc .ic { width: 0.95rem; height: 0.95rem; fill: var(--ink-faint); }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 1.1rem;
+}
+.socials a {
+  display: inline-flex;
+  width: 2.1rem;
+  height: 2.1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  transition: background .15s, transform .15s;
+}
+.socials a:hover { background: var(--accent); transform: translateY(-2px); }
+.socials .ic { width: 1.1rem; height: 1.1rem; fill: var(--ink-soft); transition: fill .15s; }
+.socials a:hover .ic { fill: #fff; }
+
+/* ---------- Main content ---------- */
+.content { min-width: 0; }
+section { margin-bottom: 2.8rem; }
+
+.section-title {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--line);
+}
+
+p { margin: 0 0 1rem; }
+section p:last-child { margin-bottom: 0; }
+
+/* ---------- Intro ---------- */
+.intro { margin-top: 0.2rem; }
+.greeting {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 0.8rem;
+}
+
+/* ---------- News ---------- */
+.news-list { margin: 0; padding: 0; list-style: none; }
+.news-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.98rem;
+}
+.news-item:last-child { border-bottom: none; }
+.news-date {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  flex: 0 0 4.5rem;
+  padding-top: 0.2rem;
+}
+.news-text { flex: 1 1 auto; }
+
+/* ---------- Interests ---------- */
+.interests { margin: 0; padding: 0; list-style: none; }
+.interests li {
+  position: relative;
+  padding-left: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+.interests li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ---------- Publications ---------- */
+.pub-note {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  margin: -0.4rem 0 1rem;
+}
+.me { color: var(--accent); font-weight: 700; }
+.pub-list { margin: 0; padding: 0; list-style: none; counter-reset: pub; }
+.pub {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.pub-num {
+  counter-increment: pub;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  flex: 0 0 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+.pub-num::before { content: counter(pub); }
+.pub-body { flex: 1 1 auto; }
+.pub-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 0.25rem;
+}
+.pub-authors {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.2rem;
+}
+.pub-authors strong { color: var(--ink); font-weight: 700; }
+.pub-venue {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.pub-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+.pub-status {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent-dk);
+  background: var(--tag-bg);
+  border-radius: 4px;
+  padding: 0.15rem 0.55rem;
+}
+.pub-links { font-family: "Inter", system-ui, sans-serif; font-size: 0.82rem; }
+.pub-links a { margin-right: 0.8rem; }
+
+/* ---------- Entries (experience / education) ---------- */
+.entry { margin-bottom: 1.2rem; }
+.entry:last-child { margin-bottom: 0; }
+.entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.entry-title {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.entry-date {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+.entry-org {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0.15rem 0 0.4rem;
+}
+.entry-detail {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.entry-points { margin: 0.3rem 0 0; padding-left: 1.1rem; }
+.entry-points li { margin-bottom: 0.25rem; font-size: 0.95rem; }
+
+/* ---------- Honors ---------- */
+.honors { margin: 0; padding: 0; list-style: none; }
+.honors li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.98rem;
+}
+.honors li:last-child { border-bottom: none; }
+.honor-year {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  flex: 0 0 3rem;
+}
+
+/* ---------- Contact ---------- */
+.contact-list { font-family: "Inter", system-ui, sans-serif; font-size: 0.95rem; margin: 0; padding: 0; list-style: none; }
+.contact-list li { margin-bottom: 0.5rem; display: flex; gap: 0.75rem; }
+.contact-key { color: var(--ink-faint); flex: 0 0 5.5rem; }
+
+/* ---------- Footer ---------- */
+.footer {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  margin-top: 3.5rem;
+  padding: 1.4rem 0 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.footer-sep { margin: 0 0.5rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 820px) {
+  .page {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    padding-top: 2rem;
+  }
+  .sidebar { position: static; }
+  .avatar { width: 8.5rem; height: 8.5rem; }
+  .topbar-nav a { margin-left: 1rem; }
+}
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  .pub { gap: 0.6rem; }
+  .pub-num { width: 1.4rem; height: 1.4rem; flex-basis: 1.4rem; }
+  .news-item, .honors li { flex-direction: column; gap: 0.1rem; }
+  .news-date { padding-top: 0; }
+  .entry-head { flex-direction: column; gap: 0.1rem; }
+}
+
+/* ---------- Dark mode ---------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:        #e6edf3;
+    --ink-soft:   #9da7b3;
+    --ink-faint:  #6e7681;
+    --line:       #2a2f36;
+    --bg:         #0d1117;
+    --bg-soft:    #161b22;
+    --accent:     #58a6ff;
+    --accent-dk:  #79b8ff;
+    --tag-bg:     #1c2531;
+  }
+  .topbar { background: rgba(13,17,23,0.85); }
+}
